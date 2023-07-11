@@ -1,0 +1,884 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrapper,
+.wrapper-pauli_contents {
+    max-width: 350px;
+    margin: 0 auto; 
+    width: 100%;
+}
+
+.background {
+background-color: #FFF9F1;
+}
+
+ 
+.nav__menu {
+    list-style: none;
+}
+
+.nav__item {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    font-family: 'Cinzel'
+}
+
+.nav__bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.1rem 0 2.2rem 0;
+    transition: all .6s ease-in-out;
+}
+
+
+.nav__bar.scroll-down {
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    position: fixed;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+
+.nav__bar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav__menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 8.2rem;
+    gap: 1.5rem;
+    transition: .5s ease-in-out;
+    width: 100%;
+    align-items: center;
+    left: -100%;
+    background-color: white;
+    height: 100vh;
+    padding-top: 1rem;
+    z-index: 100;
+}
+
+.nav__menu.active {
+    left: 0;
+}
+
+.nav__bar.active {
+    background-color: white;
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 5rem;
+    padding-bottom: 10rem;
+    border-bottom: 1px solid black;
+    z-index: 1;
+}
+
+
+
+.hero.scroll-down {
+    padding-top: 12.2rem;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 3.9em;
+    text-align: center;
+    padding-bottom: 2.9rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.hero .col-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero img {
+    position: absolute;
+    padding-top: 2rem;
+    width: 28.7rem;
+    z-index: -1;
+}
+
+.border {
+    border-bottom: 1px solid black;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.need_to_know p {
+    padding-bottom: 3rem;
+}
+
+
+.quantum_basics p{
+    padding-bottom: 4rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+h5 {
+    font-family: 'Playfair Display';
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.h7 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: -2.3rem;
+}
+
+.learn-matrices {
+    display: none;
+}
+
+.need_to_know .col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.state_vectors {
+    width: 32.4rem;
+}
+
+.gatesmatrix {
+    width: 32.6rem;
+}
+
+section {
+    padding-bottom: 3.6rem;
+}
+
+h3 {
+    padding-top: 5rem;
+}
+
+.quantum_gates p {
+    padding-bottom: 2.3rem;
+}
+
+.quantum_gates .col-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Pauli img, 
+.Hadamard img {
+    width: 19.6rem;
+}
+
+.Hadamard, 
+.CNOT {
+    padding-top: 3rem;
+}
+
+.CNOT img {
+    width: 30.4rem;
+}
+
+.next {
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.1rem;
+}
+
+footer {
+    background-color: #FFF9F1;
+    width: 100%;
+}
+
+.footer-desktop {
+    display: none;
+}
+
+.footer_logo {
+    display: flex;
+    justify-content: center;
+    padding: 2.1rem 0 1.2rem 0;
+}
+
+.join {
+    padding-bottom: 1.7rem;
+}
+
+.social_headers {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.2rem;
+}
+
+
+@media (min-width: 450px) {
+    .wrapper,
+    .wrapper-pauli_contents {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 500px) {
+    .wrapper,
+    .wrapper-pauli_contents {
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 600px) {
+    .wrapper.nav__bar-wrapper {
+        max-width: 540px;
+    }
+
+    .CNOT img{
+        width: 35rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .wrapper.nav__bar-wrapper {
+        max-width: 630px;
+    }
+
+    .wrapper,
+    .wrapper-pauli_contents,
+    .wrapper-pauli_images {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .Hadamard .col-right {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .CNOT img{
+        width: 45.6rem;
+    }
+
+    .need_to_know img {
+        width: 40rem;
+    }
+
+    .Pauli .col-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "x y"
+            "z z";
+        justify-items: center;
+        align-items: center;
+    }
+
+    .x-gate {
+        grid-area: x;
+    }
+
+    .y-gate {
+        grid-area: y;
+    }
+
+    .z-gate {
+        grid-area: z;
+        padding-top: 2.5rem;
+    }
+
+    .hero img {
+        width: 325px;
+    }
+
+    .hero {
+        padding-bottom: 12rem;
+        margin-bottom: 5.2rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .wrapper,
+    .wrapper-pauli_contents,
+    .wrapper-pauli_images {
+        max-width: 525px;
+    }
+
+    .wrapper.nav__bar-wrapper {
+        max-width: 720px;
+    }
+
+    h4 {
+        font-size: 2.7rem;
+    }
+
+    .hero img {
+        padding-top: 3rem;
+        width: 400px;
+    }
+
+    .hero {
+        margin-bottom: 9rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+        max-width: 540px;
+    }
+
+    .wrapper-pauli_images {
+        max-width: unset;
+        margin: 0;
+    }
+
+    .wrapper.nav__bar-wrapper {
+        max-width: 810px;
+    }
+
+    .need_to_know .state_vectors {
+        width: 42rem;
+    }
+
+    .need_to_know .gatesmatrix {
+        width: 42rem;
+    }
+
+    .Hadamard .col-right {
+        gap: 4rem;
+    }
+
+    .Pauli .col-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .z-gate {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        max-width: 580px;
+    }
+
+    .wrapper.nav__bar-wrapper, 
+    .wrapper-footer {
+        max-width: 904px;
+        margin: 0 auto; 
+        width: 100%;
+    }
+
+    .need_to_know .state_vectors {
+        width: 52.5rem;
+    } 
+
+    .need_to_know .gatesmatrix {
+        width: 51.2rem;
+    }
+
+    .hero h1 {
+        font-size: 5.2rem;
+    }
+
+    .hero {
+        padding-bottom: 17rem;
+        margin-bottom: 12rem;
+    }
+
+    h4 {
+        font-size: 2.7rem;
+    }
+
+    h3 {
+        font-size: 3.2rem;
+    }
+
+    .h7 {
+        font-size: 2.2rem;
+    }
+
+    .hero img {
+        padding-top: 3.5rem;
+        width: 52.9rem;
+    }
+
+    .information {
+        padding-bottom: 2rem;
+    }
+
+    .need_to_know {
+        padding-bottom: 5rem;
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+    .footer-desktop {
+        display: block;
+    }
+
+    .footer_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_nav nav ul{
+        display: flex;
+        list-style: none;
+        gap: 3.5rem;
+        align-items: center;
+        padding-top: .4rem;
+    }
+
+    .footer_nav li {
+        font-family: 'Cinzel';
+        font-size: 1.6rem;
+    }
+
+    .interaction {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+
+    .newsletter {
+        display: flex;
+        gap: 1.1rem;
+        align-items: center;
+    }
+
+    .newsletter input {
+        padding: 1rem 11.5rem 1rem 2.5rem;
+        border: 1px solid black;
+        border-radius: .4rem;
+    }
+
+    .social_headers {
+        padding: 0;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1220px) {
+    .hamburger {
+        display: none;
+    }
+
+    .wrapper,
+    .Pauli.gate {
+        max-width: 1075px;
+        margin: 0 auto;
+    }
+
+    .footer_nav nav ul {
+        gap: 4.5rem;
+    }
+
+    .nav__menu {
+        position: unset;
+        width: unset;
+        height: unset;
+        flex-direction: row;
+        gap: 4.5rem;
+        padding-top: 0;
+        background-color: unset;
+        transition: none;
+    }
+
+    .wrapper.nav__bar-wrapper,
+    .wrapper-footer {
+        max-width: 1075px;
+    }
+
+    .hero .col {
+        display: flex;
+        gap: 5rem;
+    }
+
+    .hero .col-left {
+        max-width: 52.4rem;
+    }
+
+    .hero img {
+        position: unset;
+        padding: 0;
+        z-index: unset;
+    }
+
+    .hero h1 {
+        padding-top: 2rem;
+        padding-bottom: 7rem;
+    }
+
+    .hero {
+        position: static;
+        padding-bottom: 4rem;
+        margin: 0;
+    }
+
+    h4 {
+        text-align: left;
+    }
+
+    h3 {
+        padding-bottom: 3rem;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .need_to_know {
+        padding-bottom: 5rem;
+    }
+
+    .need_to_know .col {
+        display: flex;
+        gap: 3rem;
+        justify-content: space-between;
+    }
+
+    .information {
+        max-width: 50rem;
+        padding: 0;
+    }
+
+    .need_to_know .col-right {
+        justify-content: unset;
+    }
+
+    .need_to_know .state_vectors {
+        width: 48rem;
+    }
+
+    .h7 {
+        text-align: left;
+    }
+
+    .quantum_gates .gate {
+        display: flex;
+        gap: 2.8rem;
+        padding-bottom: 2rem;
+    }
+
+    .wrapper-pauli_contents {
+        max-width: 41.9rem;
+        margin: 0;
+    }
+
+    .Hadamard .col-left {
+        max-width: 41.9rem;
+    }
+
+    .Hadamard .col-right {
+        gap: 2rem;
+    }
+
+    .CNOT .col-right {
+        gap: 3rem;
+    }
+
+    .CNOT .col-right p {
+        padding: 0;
+    }
+
+
+    .CNOT .col-left {
+        max-width: 41.9rem;
+    }
+
+    .eg1,
+    .eg2 {
+        display: flex;
+        gap: 2rem;
+        align-items: end;
+    }
+}
+
+@media (min-width: 1300px) {
+    .wrapper,
+    .wrapper.nav__bar-wrapper,
+    .wrapper-footer,
+    .Pauli.gate {
+        max-width: 1114px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper,
+    .wrapper.nav__bar-wrapper,
+    .wrapper-footer,
+    .Pauli.gate {
+        max-width: 1200px;
+    }
+
+    h4 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 3.6rem;
+    }
+
+    .next {
+        justify-content: right;
+    }
+
+    .need_to_know .col {
+        justify-content: flex-start;
+        gap: 8rem;
+    }
+
+    .need_to_know .gatesmatrix {
+        width: 60.3rem;
+    }
+
+    .need_to_know .state_vectors {
+        width: 52.5rem;
+    }
+
+    .quantum_gates .gate {
+        gap: 8rem;
+    }
+}
+
+@media (min-width: 1540px) {
+    .wrapper,
+    .wrapper.nav__bar-wrapper,
+    .wrapper-footer,
+    .Pauli.gate {
+        max-width: 1278px;
+    }
+
+    .quantum_gates .gate {
+        gap: 9rem;
+    }
+
+    .hero img {
+        width: 55rem;
+    }
+
+    .information {
+        max-width: 53rem;
+    }
+}
+
+@media (min-width: 1630px) {
+    .wrapper,
+    .wrapper.nav__bar-wrapper,
+    .wrapper-footer,
+    .Pauli.gate {
+        max-width: 1315px;
+    }
+
+    .quantum_gates .gate {
+        gap: 14rem;
+    }
+
+    .hero img {
+        width: 59rem;
+    }
+
+    .information {
+        max-width: 55rem;
+    }
+
+    h3 {
+        padding-top: 6rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@media (min-width: 1740px) {
+    .wrapper,
+    .wrapper.nav__bar-wrapper,
+    .wrapper-footer,
+    .Pauli.gate {
+        max-width: 1426px;
+    }
+
+    .hero .col {
+        gap: 17rem;
+    }
+
+    .need_to_know .col {
+        gap: 12rem;
+    }
+
+    .wrapper-pauli_contents {
+        max-width: 52rem;
+    }
+
+    .Pauli .col-right {
+        gap: 5rem;
+    }
+
+    .Hadamard .col-left {
+        max-width: 52rem;
+    }
+
+    .Hadamard .col-right {
+        gap: 5rem;
+    }
+
+    .CNOT .col-right {
+        gap: 3rem;
+    }
+
+    .CNOT .col-left {
+        max-width: 52rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .wrapper,
+    .wrapper.nav__bar-wrapper,
+    .wrapper-footer,
+    .Pauli.gate {
+        max-width: 1540px;
+    }
+
+    .hero h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 4.4rem;
+    }
+
+    h4 {
+        font-size: 3.2rem;
+    }
+
+    h3 {
+        font-size: 4rem;
+    }
+
+    h5 {
+        font-size: 3rem;
+    }
+
+    h6 {
+        font-size: 2.7rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    .nav__item {
+        font-size: 1.8rem;
+    }
+
+    .state_list li {
+        font-size: 1.8rem;
+    }
+
+    .hero .col-left {
+        max-width: 70rem;
+    }
+
+    .hero img {
+         width: 62rem;
+    }
+
+
+    .information {
+        max-width: 58rem;
+    }
+
+    .need_to_know .col {
+        gap: 18rem;
+    }
+
+    .wrapper-pauli_contents {
+        max-width: 52rem;
+    }
+
+    .quantum_gates .gate {
+        gap: 25rem;
+    }
+
+    .Pauli .col-right {
+        gap: 5rem;
+    }
+
+    .Hadamard .col-left {
+        max-width: 52rem;
+    }
+
+    .Hadamard .col-right {
+        gap: 5rem;
+    }
+
+    .CNOT .col-right {
+        gap: 3rem;
+    }
+
+    .CNOT .col-left {
+        max-width: 52rem;
+    }
+
+    .next a {
+        font-size: 1.8rem;
+    }
+}

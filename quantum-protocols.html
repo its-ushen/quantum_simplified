@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quantum Protocols</title>
+        <link rel="stylesheet" href="css/quantum-protocols.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display:wght@400;500&family=Raleway:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/microinteractions.css" />
+    </head>
+    <body>
+        <div class="background">
+            <header class="nav__bar">
+                <div class="wrapper nav__bar-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="Images/logo.svg" alt="logo" />
+                    </a>
+
+                    <ul class="nav__menu">
+                        <li>
+                            <a class="nav__item" href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav__item trigger-item"
+                                href="index.html#quantum_basics"
+                                >Basics</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-circuits.html"
+                                >Circuits</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-algorithms.html"
+                                >Algorithms</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="real-world.html"
+                                >Applications</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item active" href="quantum-protocols.html"
+                                >Protocols</a
+                            >
+                        </li>
+                    </ul>
+
+                    <div class="hamburger">
+                        <img
+                            src="Images/menu.svg"
+                            alt="hamburger menu"
+                            class="hamburger_image"
+                        />
+                    </div>
+                </div>
+            </header>
+
+            <main class="hero">
+                <div class="wrapper">
+                    <h1>Quantum Protocols</h1>
+                    <div class="col">
+                        <div class="col-left">
+                            <h4>What are quantum protocols?</h4>
+                            <div class="hero-content">
+                                <p>
+                                    Quantum protocols are a set of rules and
+                                    procedures that leverage the principles of
+                                    quantum mechanics to enable secure and
+                                    efficient communication. Basically,
+                                    regulations to let quantum devices
+                                    communicate with each other!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-right hero-image">
+                            <img
+                                src="Images/quantum protocols.png"
+                                alt="quantum protocols"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="wrapper">
+            <section class="refreshers">
+                <h3>Refreshers</h3>
+                <p class="intro">
+                    Just some quick refreshers, we need to go over the concepts
+                    of superposition and measurement.
+                </p>
+
+                <div class="superposition">
+                    <p class="bold">Superposition</p>
+                    <p>
+                        Alice and Bob can put qubits into superposition by
+                        introducing a Hadamard gate. The qubit will enter the
+                        plus state if it is in the 0 state. And if you apply a
+                        Hadamard gate to 1 state, it will turn into the minus
+                        state. They must reapply the Hadamard gate to take their
+                        qubit out of superposition. It turns the plus state into
+                        the 0 state and the minus state into the 1 state.
+                    </p>
+                </div>
+
+                <div class="measurement">
+                    <p class="bold">Measurement</p>
+                    <p>
+                        Regarding measurement now, measurement collapses
+                        superposition. If a qubit was in superposition, it has
+                        an equal probability of measuring the 0 or 1 state.
+                        However, if you decide to measure the state, then it
+                        collapses to either state. And subsequently, it remains
+                        in a collapsed state. We'll see why this matters in the
+                        next section.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="border"></div>
+
+        <div class="wrapper">
+            <section class="qkd">
+                <h3>Quantum Key Distribution</h3>
+                <div class="stage1">
+                    <div class="content">
+                        <p>
+                            Imagine this scenario: two people, Alice and Bob,
+                            want to share a highly confidential message. They
+                            are scared their message will be intercepted, so
+                            they want to encrypt it. First of all, they have to
+                            settle on an encryption key. But how will they
+                            transfer the key to each other? If the key is
+                            intercepted, then there's no point in encrypting the
+                            message. They need a more secure way to transfer the
+                            key! They can use Quantum Key Distribution!!
+                        </p>
+                        <p>
+                            There are several versions of QKD; we'll focus on
+                            the BB84 version: <br />Note that the key they want
+                            to transfer is "01101".
+                        </p>
+                    </div>
+
+                    <div class="bittoqubit-div">
+                        <img
+                            src="Images/bittoqubit.png"
+                            alt="bits to qubits"
+                            class="bittoqubit"
+                        />
+                    </div>
+                </div>
+
+                <div class="without">
+                    <p class="bold">Without Eavesdropper</p>
+                    <p>
+                        Alice encodes the key into qubits into the plus and
+                        minus states. She then randomly puts some of her qubits
+                        in superposition (You'll see why later). E.g. the third
+                        and last qubits. She transfers the state "01-0-".
+                    </p>
+                    <p>
+                        Bob receives the qubits and applies a Hadamard to some
+                        random qubits. His goal is to try to guess which ones
+                        Alice put into superposition and take them out of it. He
+                        settles on the 1st and 5th qubits, and the state becomes
+                        "+1-01". He collapses the state and measures "11101".
+                        This is not the original key, but don't worry; we'll see
+                        how they fix the issue in the next step.
+                    </p>
+                    <p>
+                        They then relay to each other which qubits they put into
+                        superposition and which they didn't on a classical
+                        channel. For instance, in the following example, Alice's
+                        would correspond to "NNSNS", and Bob's would be "SNNNS".
+                    </p>
+                    <p>
+                        They ignore the ones they disagree with. They both end
+                        up with the state 101 as the key!
+                    </p>
+                </div>
+
+                <div class="with">
+                    <p class="bold">With Eavesdropper</p>
+                    <p>
+                        Issue solved? Well, almost, but not entirely. What if
+                        Eve (an eavesdropper) was listening?
+                    </p>
+                    <p>
+                        Let's run through the scenario again. The first few
+                        steps will remain the same. However, when Alice
+                        transfers the state, Eve will measure the key. She can
+                        apply Hadamards like Bob did or measure them by
+                        collapsing the superposition. For example, if she
+                        applies a Hadamard gate on the 5th qubit. The state will
+                        change from "01-0-" to "01-01". Bob is unaware of this
+                        and continues on. Once again, he applies the Hadamard
+                        gate on the 1st and last qubits. He gets the state
+                        "+1-0-" and measures 11000.
+                    </p>
+                    <p>
+                        The procedure will continue as normal. However, after
+                        discarding the 1st and 3rd qubits, Alice ends up with
+                        the key 101 and Bob with 100. To stop this from
+                        happening, they double-check if there have been any
+                        eavesdroppers. They compare some bits of the key and
+                        look for any disparities. They notice that the last
+                        qubit has been tampered with, so they change the channel
+                        and repeat.
+                    </p>
+                    <p>
+                        This procedure will include way more than 5 bits! Even
+                        if you discard and sacrifice half your bits but have 100
+                        remaining, you will have enough to form a secure
+                        encryption key!
+                    </p>
+                    <p>
+                        Finally, some of you might think that the procedure
+                        could easily be breached if Eve copies the state of the
+                        qubits and also intercepts the classical communication
+                        where they tell each other which qubits have had a
+                        Hadamard applied to them. However, due to the no-cloning
+                        theorem, Eve can't copy the state in the first place!
+                    </p>
+                    <p>
+                        Alice and Bob can now share their secret message
+                        confidentially.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="border"></div>
+
+        <div class="wrapper">
+            <section class="other">
+                <h3>Other Quantum Protocol</h3>
+                <div class="center">
+                    <div class="quantum_teleportation">
+                        <div class="content">
+                            <p class="bold">Quantum Teleportation</p>
+                            <p>
+                                This allows for the transfer of qubits while
+                                perfectly maintaining the qubit's state. The
+                                significant feature is that it can transfer
+                                qubits over immense distances, even into space!
+                                However, before you get too excited, you can't
+                                move matter from one point to another via
+                                dematerialisation and materialising in another
+                                location. You can only transfer the information
+                                to another qubit, not the qubit itself. Here's a
+                                phenomenal explanation offered by The University
+                                of Chicago and UC Santa Barbara that explains
+                                the protocol in more detail. Beware that they
+                                talk a lot about the maths behind it. However,
+                                don't let that phase you; you can ignore it to
+                                get a general understanding of Quantum
+                                teleportation.
+                            </p>
+                        </div>
+
+                        <div class="qtp-div">
+                            <iframe
+                                class="qtp"
+                                src="https://www.youtube.com/embed/RukK8ZzmBik"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+
+                    <div class="others">
+                        <div class="superdense_coding">
+                            <p class="bold">Superdense Coding</p>
+                            <p>
+                                Superdense coding enables the transmission of
+                                classical information more efficiently than
+                                classical methods. It utilises entanglement to
+                                encode two classical bits of information into a
+                                single qubit, which can then be transmitted.
+                            </p>
+                        </div>
+
+                        <div class="qec">
+                            <p class="bold">Quantum Error Correction</p>
+                            <p>
+                                This protocol protects the quantum state errors
+                                and decoherence caused by noise and
+                                environmental interactions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer-mobile">
+            <div class="border"></div>
+            <div class="footer_logo">
+                <a href="#"><img src="Images/logo.svg" alt="logo" /></a>
+            </div>
+            <p class="join">Join the Community</p>
+
+            <div class="social_headers">
+                <a href="#"><img src="Images/twitter.png" alt="twitter" /></a>
+                <a href="#"
+                    ><img src="Images/facebook.png" alt="facebook"
+                /></a>
+                <a href="#"
+                    ><img src="Images/linkedin.png" alt="linkedin"
+                /></a>
+            </div>
+        </footer>
+
+        <footer class="footer-desktop">
+            <div class="border"></div>
+            <div class="wrapper-footer">
+                <div class="footer_nav">
+                    <div class="footer_logo">
+                        <a href="#"
+                            ><img src="Images/logo.svg" alt="logo"
+                        /></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li><a href="index.html">Basics</a></li>
+                            <li>
+                                <a href="quantum-circuits.html">Circuits</a>
+                            </li>
+                            <li>
+                                <a href="quantum-algorithms.html">Algorithms</a>
+                            </li>
+                            <li><a href="real-world.html">Applications</a></li>
+                            <li>
+                                <a href="quantum-protocols.html">Protocols</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="interaction">
+                    <div class="social_headers">
+                        <a href="#"
+                            ><img src="Images/twitter.png" alt="twitter"
+                        /></a>
+                        <a href="#"
+                            ><img src="Images/facebook.png" alt="facebook"
+                        /></a>
+                        <a href="#"
+                            ><img src="Images/linkedin.png" alt="linkedin"
+                        /></a>
+                    </div>
+
+                    <div class="newsletter">
+                        <p>Join the Community</p>
+                        <input type="email" placeholder="Enter your email" />
+                        <a href="#"
+                            ><img
+                                src="Images/submit.svg"
+                                alt="submit email to newsletter"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/menu.js"></script>
+        <script src="js/scrolldown.js"></script>
+    </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quantum Circuits</title>
+        <link rel="stylesheet" href="css/quantum-circuit.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display:wght@400;500&family=Raleway:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/microinteractions.css" />
+    </head>
+    <body>
+        <div class="background">
+            <header class="nav__bar">
+                <div class="wrapper nav__bar-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="Images/logo.svg" alt="logo" />
+                    </a>
+
+                    <ul class="nav__menu">
+                        <li>
+                            <a class="nav__item" href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav__item trigger-item"
+                                href="index.html#quantum_basics"
+                                >Basics</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item active" href="quantum-circuits.html"
+                                >Circuits</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-algorithms.html"
+                                >Algorithms</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="real-world.html"
+                                >Applications</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-protocols.html"
+                                >Protocols</a
+                            >
+                        </li>
+                    </ul>
+
+                    <div class="hamburger">
+                        <img
+                            src="Images/menu.svg"
+                            alt="hamburger menu"
+                            class="hamburger_image"
+                        />
+                    </div>
+                </div>
+            </header>
+
+            <main class="hero">
+                <div class="wrapper">
+                    <h1>Quantum Circuits</h1>
+                    <div class="col">
+                        <div class="col-left">
+                            <h4>What is a quantum circuit?</h4>
+                            <p>
+                                A quantum circuit is a sequence of operations on
+                                one or more qubits. Similar to classical
+                                circuits, the operations are represented using
+                                gates, quantum gates. The most popular quantum
+                                gates include the Hadamard Gate, Pauli Gates and
+                                the CNOT Gate.
+                            </p>
+                        </div>
+
+                        <div class="col-right hero-image">
+                            <img
+                                src="Images/quantum circuit.png"
+                                alt="quantum circuit"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="wrapper">
+            <section class="need_to_know">
+                <h3>What do I need to know?</h3>
+                <div class="col">
+                    <div class="col-left information">
+                        <div class="info 1">
+                            <p class="h7">
+                                1. Quantum States can be represented as vectors
+                            </p>
+                            <p class="content">
+                                A quantum state can be represented as a vector
+                                in which represents the probabilities of
+                                measuring the qubit in the |0> or |1> state. For
+                                example, the state |0> can be represented as the
+                                vector [1 0], and the state |1> can be
+                                represented as the vector [0 1].
+                            </p>
+                        </div>
+                        <div class="info 2">
+                            <p class="h7">
+                                2. Quantum Gates can be represented as Matrices
+                            </p>
+                            <p class="content">
+                                Quantum gates can be represented as matrices. To
+                                the right are the matrix representations of the
+                                Hadamard, Pauli-X, Pauli-Z and CNOT gates.
+                            </p>
+                        </div>
+                        <div class="info 3">
+                            <p class="h7">3. How to apply a Gate to a state?</p>
+                            <p class="content">
+                                Simply multiply the corresponding matrices of
+                                the gate and the state together. The resulting
+                                matrix is what happens when an operator is
+                                applied to a gate.
+                            </p>
+                        </div>
+                        <div class="info 4">
+                            <p class="h7">
+                                4. Quantum Circuits are Quantum Gates strung
+                                together
+                            </p>
+                            <p class="content">
+                                In order to create a quantum circuit, we just
+                                apply a sequence of quantum gates. We’ll only
+                                learn about quantum gates for now. In the next
+                                section about quantum algorithms we’ll see the
+                                implementation. (Since quantum algorithms boil
+                                down to quantum circuits that take in an input
+                                and give out an output.)
+                            </p>
+                        </div>
+
+                        <div class="learn-matrices">
+                            <p>
+                                Don’t know how to multiply matrices? Dont worry!
+                            </p>
+                            <div class="cta">
+                                <a href="#">
+                                    <span>
+                                        <img
+                                            src="Images/expand.svg"
+                                            alt="expand symbol"
+                                        />
+                                    </span>
+                                    <p>Learn Here</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <img
+                            class="state_vectors"
+                            src="Images/statevectors.png"
+                            alt="state vectors"
+                        />
+                        <img
+                            class="gatesmatrix"
+                            src="Images/Gates.png"
+                            alt="quantum gates"
+                        />
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="border"></div>
+
+        <section class="quantum_gates">
+            <h3>Quantum Gates</h3>
+            <div class="Pauli gate">
+                <div class="col-left wrapper-pauli_contents">
+                    <h4>Pauli Gates</h4>
+                    <p>
+                        The Pauli gates are a set of three single-qubit gates
+                        that rotate a qubit's state around the x, y, or z-axis
+                        of the Bloch sphere.
+                    </p>
+                </div>
+                <div class="col-right wrapper-pauli_images">
+                    <img class="x-gate" src="Images/x gate.png" alt="x gate" />
+                    <img class="y-gate" src="Images/y gate.png" alt="y gate" />
+                    <img class="z-gate" src="Images/z gate.png" alt="z gate" />
+                </div>
+            </div>
+            <div class="Hadamard gate wrapper">
+                <div class="col-left">
+                    <h4>Hadamard Gate</h4>
+                    <p>
+                        The Hadamard gate is a single-qubit gate that puts a
+                        qubit into a superposition of the |0> and |1> states
+                        with equal probability. It is often used to create
+                        superposition states, such as the |+> and |-> states.
+                        Conversely, if you had a superpositon state and you
+                        applied a H gate you would get either the |0> or the |1>
+                        state.
+                    </p>
+                </div>
+                <div class="col-right">
+                    <img src="Images/hadamard1.png" alt="hadamard 1" />
+                    <img src="Images/hadamard2.png" alt="hadamard 2" />
+                </div>
+            </div>
+            <div class="CNOT gate wrapper">
+                <div class="col-left">
+                    <h4>CNOT Gates</h4>
+                    <p>
+                        The CNOT gate is a two-qubit gate that performs a NOT
+                        operation on the second qubit if the first qubit is in
+                        the |1> state.
+                    </p>
+                    <p>A NOT gate is also known as an X gate.</p>
+                    <p>
+                        In example one, we leave qubit 0 at the 0 state,
+                        therefore the NOT operation isn’t placed on qubit 1.
+                        However, in example 2, we apply an x gate to qubit 0
+                        placing it into the 1 state. Which forces the cnot gate
+                        to apply the NOT operation onto the qubit 1.
+                    </p>
+                </div>
+                <div class="col-right">
+                    <div class="eg1">
+                        <img src="Images/cnot1.png" alt="cnot gate" />
+                        <p>eg.1</p>
+                    </div>
+                    <div class="eg2">
+                        <img src="Images/cnot2.png" alt="cnot gate" />
+                        <p>eg.2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrapper">
+            <div class="next">
+                <a href="quantum-algorithms.html">Next: Quantum Algorithms</a>
+            </div>
+        </div>
+
+        <footer class="footer-mobile">
+            <div class="border"></div>
+            <div class="footer_logo">
+                <a href="#"><img src="Images/logo.svg" alt="logo" /></a>
+            </div>
+            <p class="join">Join the Community</p>
+
+            <div class="social_headers">
+                <a href="#"><img src="Images/twitter.png" alt="twitter" /></a>
+                <a href="#"
+                    ><img src="Images/facebook.png" alt="facebook"
+                /></a>
+                <a href="#"
+                    ><img src="Images/linkedin.png" alt="linkedin"
+                /></a>
+            </div>
+        </footer>
+
+        <footer class="footer-desktop">
+            <div class="border"></div>
+            <div class="wrapper-footer">
+                <div class="footer_nav">
+                    <div class="footer_logo">
+                        <a href="#"
+                            ><img src="Images/logo.svg" alt="logo"
+                        /></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li><a href="index.html">Basics</a></li>
+                            <li>
+                                <a href="quantum-circuits.html">Circuits</a>
+                            </li>
+                            <li>
+                                <a href="quantum-algorithms.html">Algorithms</a>
+                            </li>
+                            <li><a href="real-world.html">Applications</a></li>
+                            <li>
+                                <a href="quantum-protocols.html">Protocols</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="interaction">
+                    <div class="social_headers">
+                        <a href="#"
+                            ><img src="Images/twitter.png" alt="twitter"
+                        /></a>
+                        <a href="#"
+                            ><img src="Images/facebook.png" alt="facebook"
+                        /></a>
+                        <a href="#"
+                            ><img src="Images/linkedin.png" alt="linkedin"
+                        /></a>
+                    </div>
+
+                    <div class="newsletter">
+                        <p>Join the Community</p>
+                        <input type="email" placeholder="Enter your email" />
+                        <a href="#"
+                            ><img
+                                src="Images/submit.svg"
+                                alt="submit email to newsletter"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/menu.js"></script>
+        <script src="js/scrolldown.js"></script>
+    </body>
+</html>

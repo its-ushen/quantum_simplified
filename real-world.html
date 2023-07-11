@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Real World Applications</title>
+        <link rel="stylesheet" href="css/real-world.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display:wght@400;500&family=Raleway:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/microinteractions.css" />
+    </head>
+    <body>
+        <div class="background">
+            <header class="nav__bar">
+                <div class="wrapper nav__bar-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="Images/logo.svg" alt="logo" />
+                    </a>
+
+                    <ul class="nav__menu">
+                        <li>
+                            <a class="nav__item" href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="nav__item trigger-item"
+                                href="index.html#quantum_basics"
+                                >Basics</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-circuits.html"
+                                >Circuits</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-algorithms.html"
+                                >Algorithms</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item active" href="real-world.html"
+                                >Applications</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-protocols.html"
+                                >Protocols</a
+                            >
+                        </li>
+                    </ul>
+
+                    <div class="hamburger">
+                        <img
+                            src="Images/menu.svg"
+                            alt="hamburger menu"
+                            class="hamburger_image"
+                        />
+                    </div>
+                </div>
+            </header>
+
+            <main class="hero">
+                <div class="wrapper">
+                    <h1>Real World Quantum Algorithms</h1>
+                    <p class="subtitle">
+                        Welcome to this section, where we will learn about three
+                        famous quantum algorithms by delving into how they could
+                        apply to some real life cases.
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        <section id="deutsch-josza" class="deutsch-josza wrapper">
+            <h3>Deutsch-Jozsa Algorithm</h3>
+            <h4>Testing if a coin is biased</h4>
+
+            <div class="pairs pairs1">
+                <div class="pair pair1">
+                    <div class="content">
+                        <p>
+                            Say you have a coin, and you want to see if it's
+                            biased or not. In this hypothetical situation, the
+                            coin flip outcomes are strictly probabilistic; if
+                            biased, you would get the same outcome twice;
+                            otherwise, you would get different outcomes.
+                        </p>
+                        <p>
+                            The table shows you would have four different
+                            scenarios based on two flips. You could get HH or
+                            TT, both of which indicate that the coin is biased,
+                            or you could get either HT or TH, which would
+                            suggest that the coin is fair.
+                        </p>
+                    </div>
+
+                    <div class="dj_circuit-div">
+                        <img
+                            class="dj_circuit"
+                            src="Images/dj_circuit.png"
+                            alt="deutsch-josza circuit"
+                        />
+                    </div>
+                </div>
+                <div class="pair pair2">
+                    <div class="outcome_table-div">
+                        <img
+                            class="outcome_table"
+                            src="Images/outcome_table.png"
+                            alt="outcome table"
+                        />
+                    </div>
+                    <div class="content">
+                        <p>
+                            Thinking classically, how could you determine
+                            whether the coin is fair? You must figure it out via
+                            brute force and flip it twice. Is there another
+                            better way to figure this out?
+                        </p>
+                        <p>
+                            Well, by harnessing the power of quantum computers,
+                            you can. We can use a circuit like the one above. So
+                            imagine this: you are in a parallel universe, and
+                            you can simultaneously stimulate both coin flips.
+                            Then you can compare if the results are identical or
+                            different.
+                        </p>
+                        <p>
+                            Quantumly, you would first put all the outcomes into
+                            superposition by applying a Hadamard gate. Then you
+                            would compare the two outcomes; if they are similar,
+                            you would get the result zero; however, if they
+                            aren't, you would get one. Sounds simple? Well, yes,
+                            that was the very first quantum algorithm. As time
+                            progressed, so did the algorithms; you will build on
+                            what you learned today in the following examples.
+                        </p>
+                    </div>
+                </div>
+                <div class="pair pair3">
+                    <div class="content">
+                        <p>
+                            Finally, say you wanted to generalise from
+                            coin-flipping to other useful operations. A general
+                            use case for this algorithm would be anything that
+                            included a function, and you could test if the
+                            function was constant or biased.
+                        </p>
+                        <p>
+                            If you wish to learn more about the algorithm,
+                            albeit more mathematically, watch this brilliant
+                            video by Artur Ekert. He includes details about
+                            oracles that we will use in the following examples.
+                        </p>
+                    </div>
+                    <div class="dja-div">
+                        <iframe
+                            class="dja"
+                            src="https://www.youtube.com/embed/DyINHZoOcLQ"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="border"></div>
+
+        <section id="grover" class="grover's wrapper">
+            <h3>Grover's Algorithm</h3>
+            <h4>Looking For Wally</h4>
+
+            <div class="pairs">
+                <div class="pair pair4">
+                    <div class="content">
+                        <p>
+                            You have a picture, and you want to find Wally. How
+                            would you go about finding Wally using a computer?
+                            Well, you would have to look at each character and
+                            compare it to the characteristics of Wally, and if
+                            it matches, you have found Wally, and if not, you
+                            keep going.
+                        </p>
+                        <p>
+                            This method would take O(n) operations given that
+                            there are n characters. However, is there a faster
+                            way you could do this? Yes, there is! See Grover's
+                            Algorithm Circuit, which does it in O(n^1/2) or
+                            O(square root n) steps. A quadratic speedup!
+                        </p>
+                        <p>
+                            At a high level, what we need to do, is to visualise
+                            every possible character at the same time; then, for
+                            the characters that share characteristics with
+                            Wally, we increase the probability of measuring it,
+                            and then for the ones that don't, we decrease the
+                            chance of measuring it. If we repeat this process
+                            root n times, we should have a very high (almost
+                            certain) probability of measuring Wally.
+                        </p>
+                    </div>
+
+                    <div class="grovers_s-div">
+                        <img
+                            class="grovers_s"
+                            src="Images/Grover's Superposition.png"
+                            alt="superposition of states"
+                        />
+                    </div>
+                </div>
+                <div class="pair pair5">
+                    <div class="grovers_oracle-div">
+                        <img
+                            class="grovers_oracle"
+                            src="Images/Grover's Oracle.png"
+                            alt="Grover's oracle"
+                        />
+                    </div>
+                    <div class="content">
+                        <p>Let's go into more detail now.</p>
+                        <p>
+                            In this scenario, there are only eight characters.
+                            The first step is assigning each character a state
+                            to simulate all the states simultaneously. And since
+                            three qubits allow for eight states, we only need to
+                            use three qubits. To demonstrate this, character one
+                            will have the state 000, character two 001 and so
+                            on, until character eight has 111. We must apply a
+                            Hadamard gate to each of the three qubits to
+                            visualise all the states simultaneously.
+                        </p>
+                        <p>
+                            The second stage is Amplitude Amplification, a
+                            process that increases the amplitude of one state
+                            while reducing the amplitude of all the other states
+                            in the superposition. In this algorithm, amplitude
+                            amplification is created by an oracle and Grover's
+                            operator combined.
+                        </p>
+                        <p>
+                            To visualise this, here's a diagram that shows all
+                            the states after putting them into equal
+                            superposition. They all have the same probability of
+                            being Wally. Note that Wally is at the state w.
+                        </p>
+                    </div>
+                </div>
+                <div class="pair pair6">
+                    <div class="content">
+                        <p>
+                            Now we will see what the oracle and Grover's
+                            operator do to the superposition. The oracle is
+                            encoded with the characteristics of Wally. For
+                            instance. a red and white striped shirt, jeans and a
+                            cane. It will compare all the states simultaneously,
+                            but when a state matches the characteristics, it
+                            will change the amplitude of the state to a
+                            minus—essentially flagging it.
+                        </p>
+                        <p>
+                            Secondly, Grover's operator looks for the mean
+                            amplitude and rotates each state about the mean. So
+                            all the states apart from the flagged one would
+                            decrease. Since there is such a significant
+                            disparity between Wally's state and the mean, the
+                            new amplitude of the state would be huge.
+                        </p>
+                        <p>
+                            This process will repeat for approximately root n
+                            times, and then you can measure out Wally with a
+                            high probability!
+                        </p>
+                    </div>
+                    <div class="grovers_diff-div">
+                        <img
+                            class="grovers_diff"
+                            src="Images/Grover's Diffusion operator.png"
+                            alt="Grover's diffusion operator"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="border"></div>
+
+        <section id="shor" class="shor's wrapper">
+            <h3>Shor's Algorithm</h3>
+            <h4>Craking RSA Encryption</h4>
+
+            <div class="pairs">
+                <div class="pair pair7">
+                    <div class="content">
+                        <p>
+                            Imagine you have a secret message locked using RSA
+                            encryption, which relies on the difficulty of
+                            factoring large numbers into prime factors. Breaking
+                            this encryption requires finding the two prime
+                            numbers multiplied to create the encryption key.
+                        </p>
+                        <p>
+                            If we used a classical computer to break the RSA
+                            encryption, we would have to try many possible
+                            combinations of prime factors until we find the
+                            correct ones. This process would take a long time
+                            and require a lot of computational power.
+                        </p>
+                        <p>
+                            The fastest way to currently do this would be using
+                            the Number Field Sieve Algorithm
+                        </p>
+                    </div>
+
+                    <div class="s_circuit-div">
+                        <img
+                            class="s_circuit"
+                            src="Images/s_circuit.svg"
+                            alt="Shor's circuit"
+                        />
+                    </div>
+                </div>
+                <div class="pair pair8">
+                    <div class="shor_run_time-div">
+                        <img
+                            class="shor_run_time"
+                            src="Images/Run time of Shor's.png"
+                            alt="Shor vs Number Field Sieve"
+                        />
+                    </div>
+                    <div class="content">
+                        <p>
+                            However, Shor's powerful quantum algorithm offers a
+                            much faster approach to factorising large numbers.
+                            Here's how it works:
+                        </p>
+                        <p>
+                            Shor's algorithm starts by utilising the power of
+                            quantum superposition. It allows us to consider
+                            multiple possible combinations of prime factors
+                            simultaneously.
+                        </p>
+                        <p>
+                            Shor's algorithm applies a mathematical operation
+                            called the Quantum Fourier Transform (QFT) to
+                            analyse the combinations of prime factors. This
+                            operation enables the quantum computer to identify
+                            patterns in the factors.
+                        </p>
+                        <p>
+                            Shor's algorithm uses quantum phase estimation to
+                            measure the periods or patterns of certain
+                            mathematical functions related to the factors. These
+                            periods contain information about the prime factors
+                            themselves.
+                        </p>
+                    </div>
+                </div>
+                <div class="pair pair9">
+                    <div class="content">
+                        <p>
+                            The measurement then collapses the superposition
+                            into a specific set of factors, the prime numbers we
+                            sought.
+                        </p>
+                        <p>
+                            Once the prime factors are obtained, we can break
+                            the RSA encryption and access the secret message.
+                        </p>
+                        <p>
+                            Sounds complicated? Well, it was for me when I first
+                            learned about it. This video by minutephysics helped
+                            me to understand the algorithm quite well
+                        </p>
+                    </div>
+                    <div class="sa-div">
+                        <iframe
+                            class="sa"
+                            src="https://www.youtube.com/embed/lvTqbM5Dq4Q"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrapper">
+            <div class="next">
+                <a href="quantum-protocols.html">Next: Quantum Protocols</a>
+            </div>
+        </div>
+
+        <footer class="footer-mobile">
+            <div class="border"></div>
+            <div class="footer_logo">
+                <a href="#"><img src="Images/logo.svg" alt="logo" /></a>
+            </div>
+            <p class="join">Join the Community</p>
+
+            <div class="social_headers">
+                <a href="#"><img src="Images/twitter.png" alt="twitter" /></a>
+                <a href="#"
+                    ><img src="Images/facebook.png" alt="facebook"
+                /></a>
+                <a href="#"
+                    ><img src="Images/linkedin.png" alt="linkedin"
+                /></a>
+            </div>
+        </footer>
+
+        <footer class="footer-desktop">
+            <div class="border"></div>
+            <div class="wrapper-footer">
+                <div class="footer_nav">
+                    <div class="footer_logo">
+                        <a href="#"
+                            ><img src="Images/logo.svg" alt="logo"
+                        /></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li><a href="index.html">Basics</a></li>
+                            <li>
+                                <a href="quantum-circuits.html">Circuits</a>
+                            </li>
+                            <li>
+                                <a href="quantum-algorithms.html">Algorithms</a>
+                            </li>
+                            <li><a href="real-world.html">Applications</a></li>
+                            <li>
+                                <a href="quantum-protocols.html">Protocols</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="interaction">
+                    <div class="social_headers">
+                        <a href="#"
+                            ><img src="Images/twitter.png" alt="twitter"
+                        /></a>
+                        <a href="#"
+                            ><img src="Images/facebook.png" alt="facebook"
+                        /></a>
+                        <a href="#"
+                            ><img src="Images/linkedin.png" alt="linkedin"
+                        /></a>
+                    </div>
+
+                    <div class="newsletter">
+                        <p>Join the Community</p>
+                        <input type="email" placeholder="Enter your email" />
+                        <a href="#"
+                            ><img
+                                src="Images/submit.svg"
+                                alt="submit email to newsletter"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/menu.js"></script>
+        <script src="js/scrolldown.js"></script>
+        <script src="js/card.js"></script>
+    </body>
+</html>

@@ -1,0 +1,852 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.carousel,
+.carousel__slide {
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.image {
+    background-image: url(../Images/Background.png);
+    background-position: 69% center;
+}
+
+.wrapper {
+   max-width: 350px;
+   margin: 0 auto; 
+   width: 100%;
+}
+
+.nav__menu {
+    list-style: none;
+}
+
+.nav__item {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    font-family: 'Cinzel'
+}
+
+.nav__bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.1rem 0 2.2rem 0;
+    background-color: rgba(255, 255, 255, .6);
+    transition: all .6s ease-in-out;
+}
+
+
+.nav__bar.scroll-down {
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    position: fixed;
+    left: 0;
+    background-color: white;
+}
+
+
+.nav__bar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav__menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 8.2rem;
+    gap: 1.5rem;
+    transition: .5s ease-in-out;
+    width: 100%;
+    align-items: center;
+    left: -100%;
+    background-color: white;
+    height: 100vh;
+    padding-top: 1rem;
+    z-index: 100;
+}
+
+.nav__menu.active {
+    left: 0;
+}
+
+.nav__bar.active {
+    background-color: white;
+}
+
+.hero {
+    background-color: rgba(255, 255, 255, .55);
+    padding: 4rem 0 12rem 0;
+    /* padding-top: 8.2rem; */
+}
+
+.hero.scroll-down {
+    padding-top: 12.2rem;
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 3.9em;
+    text-align: center;
+    padding-bottom: 8.7rem;
+}
+
+.subtitle {
+    display: none;
+}
+
+.hero .cta a {
+    display: flex;
+    gap: .7rem;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem .85rem .8rem .85rem;
+    max-width: 15.4rem;
+    margin: 0 auto;
+    box-shadow: 4px 4px 0 rgba(0,0,0, 1);
+    border: 1px solid black;
+}
+
+.hero .cta p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+section {
+    padding: 4rem 0 0 0;
+  }
+
+.border {
+    border-bottom: 1px solid black;
+}
+
+h2 {
+    font-family: 'Playfair Display';
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+h4 {
+    font-family: 'Playfair Display';
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.quantum_basics p{
+    padding-bottom: 4rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+h5 {
+    font-family: 'Playfair Display';
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.state_list {
+    list-style: none;
+    padding-bottom: 2rem;
+    margin-top: -3.5rem;
+}
+
+.state_list li {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.quantum_states p{
+    padding-bottom: 4rem;
+}
+
+.col_right.bloch_sphere{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.bloch_sphere1 {
+    display: none;
+}
+
+.quantum_properties-desktop {
+    display: none;
+}
+
+
+.carousel {
+    width: 27.8rem;
+    height: 23.1rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel__slide {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: .8rem;
+    width: 27.8rem;
+    height: 23.1rem;
+    margin-bottom: 1rem;
+}
+
+.carousel__track-container {
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+
+
+.carousel__track {
+    list-style: none;
+    position: relative;
+    /* overflow: hidden; */
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: 'Playfair Display';
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.content {
+    font-size: 1.6rem;
+    padding: 0 .8rem 2.6rem .8rem;
+    text-align: center;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel__button--left {
+    left: -3rem;
+}
+
+.carousel__button--right {
+    right: -3rem;
+}
+
+.carousel__button img {
+    width: 2.5rem;
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgb(0,0,0,.3);
+    margin: 0 9px;
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.is-hidden { display: none;}
+
+.quantum_properties-mobile {
+    margin-bottom: 5rem;
+}
+
+.next {
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2.1rem;
+}
+
+footer {
+    background-color: #FFF9F1;
+}
+
+.footer-desktop {
+    display: none;
+}
+
+.footer_logo {
+    display: flex;
+    justify-content: center;
+    padding: 2.1rem 0 1.2rem 0;
+}
+
+.join {
+    padding-bottom: 1.7rem;
+}
+
+.social_headers {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.2rem;
+}
+
+@media (min-width: 400px) {
+    .carousel__button--left {
+        left: -4rem;
+    }
+    
+    .carousel__button--right {
+        right: -4rem;
+    }
+}
+
+@media (min-width: 450px) {
+    .wrapper {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 500px) {
+    .wrapper {
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 600px) {
+    .wrapper {
+        max-width: 540px;
+    }
+
+    .hero h1 {
+        padding-bottom: 2rem;
+    }
+    .subtitle {
+        display: block;
+        width: 50rem;
+        margin: 0 auto;
+        padding-bottom: 3.6rem;
+        font-weight: 400;
+    }
+
+    .bloch_sphere2 {
+        height: 25em;
+        width: 30em;
+    }
+    
+    
+}
+
+@media (min-width: 700px) {
+    .wrapper {
+        max-width: 630px;
+    }
+    
+    .col_right.bloch_sphere{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 4rem;
+        gap: 2rem;
+    }
+    
+    .bloch_sphere1 {
+        display: block;
+        height: 22.6rem;
+    }
+
+    .bloch_sphere2 {
+        height: 22.6rem;
+        width: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    .wrapper {
+        max-width: 720px;
+    }
+
+    .col_right.bloch_sphere {
+        gap: 4rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+        max-width: 810px;
+    }
+
+    .col_right.bloch_sphere {
+        gap: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        max-width: 904px;
+    }
+
+
+    .image {
+        background-position: 40% center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .nav__bar {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .hero h1 {
+        text-align: left;
+        max-width: 47.6rem;
+        font-size: 4.2rem;
+    }
+
+    .subtitle {
+        text-align: left;
+        margin: 0;
+    }
+
+    .hero .cta  a{
+        justify-content: left;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+        text-align: left;
+    }
+
+    .col {
+        display: flex;
+        gap: 4.2rem;
+    }
+
+    h3 {
+        font-size: 3.2rem;
+    }
+
+    h4 {
+        text-align: left;
+        font-size: 2.7rem;
+    }
+
+    h5 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .quantum_states .col_right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .state_list li {
+        text-align: left;
+    } 
+
+    .quantum_properties-mobile {
+        display: none;
+    }
+
+    .quantum_properties-desktop {
+        display: block;
+    }
+
+    .set1 {
+        display: flex;
+        gap: 5rem;
+        padding-bottom: 3.8rem;
+        justify-content: center;
+    }
+
+    .set2 {
+        display: flex;
+        gap: 5rem;
+        justify-content: center;
+    }
+
+    .card {
+        border: 1px solid black;
+        border-radius: .8rem;
+        width: 25.8rem;
+        padding: .9rem 0 2.6rem 0;
+    }
+
+    .card p {
+        padding: 0 .8rem;
+    }
+
+    h6 {
+        font-family: 'Playfair Display';
+        font-size: 2.2rem;
+        text-align: center;
+        font-weight: 500;
+        padding-bottom: 1rem;
+    }
+
+    .card p {
+        text-align: center;
+    }
+
+    .next {
+        margin: 4rem 0;
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+    .footer-desktop {
+        display: block;
+    }
+
+    .footer_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_nav nav ul{
+        display: flex;
+        list-style: none;
+        gap: 3.5rem;
+        align-items: center;
+        padding-top: .4rem;
+    }
+
+    .footer_nav li {
+        font-family: 'Cinzel';
+        font-size: 1.6rem;
+    }
+
+    .interaction {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+
+    .newsletter {
+        display: flex;
+        gap: 1.1rem;
+        align-items: center;
+    }
+
+    .newsletter input {
+        padding: 1rem 11.5rem 1rem 2.5rem;
+        border: 1px solid black;
+        border-radius: .4rem;
+    }
+
+    .social_headers {
+        padding: 0;
+        align-items: center;
+    }
+
+    .left_col {
+        width: 185%;
+    }
+}
+
+@media (min-width: 1150px) {
+    .wrapper {
+        max-width: 1012px;
+    }
+
+    .card {
+        padding: 1.2rem 0 2.6rem 0;
+    }
+
+    .card p {
+        padding: 0 1rem;
+    }
+
+    .col_left {
+        width: 59%;
+    }
+}
+
+@media (min-width: 1220px) {
+    .hamburger {
+        display: none;
+    }
+
+    .footer_nav nav ul {
+        gap: 4.5rem;
+    }
+
+    .nav__menu {
+        position: unset;
+        width: unset;
+        height: unset;
+        flex-direction: row;
+        gap: 4.5rem;
+        padding-top: 0;
+        background-color: unset;
+        transition: none;
+    }
+
+
+    .bloch_sphere1 {
+        padding-right: 5rem;
+        height: 26rem;
+    }
+    .bloch_sphere2 {
+        padding-left: 5rem;
+    }
+
+    .bloch_sphere {
+        padding-left: 5rem;
+    }
+
+    .ket_notation {
+        padding-top: 2rem;
+        padding-left: 10rem;
+    }
+
+    .wrapper {
+        max-width: 1075px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .wrapper {
+        max-width: 1114px;
+    }
+
+    h6 {
+        font-size: 2.4rem;
+    }
+
+    .card {
+        width: 30rem;
+    }
+
+    .card p {
+        padding: 0 4.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        max-width: 1200px;
+    }
+
+    .hero h1 {
+        font-size: 5.2rem;
+        max-width: 51rem;
+    }
+
+    .subtitle {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h4 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 3.6rem;
+    }
+
+    h5 {
+        font-size: 2.7rem;
+    }
+
+
+    .next {
+        justify-content: right;
+    }
+
+    .bloch_sphere {
+        padding-left: 7rem;
+    }
+
+    .ket_notation {
+        padding-left: 14rem;
+    }
+
+    .right_col {
+        padding-bottom: 2rem;
+    }
+
+    .bloch_sphere1 {
+        padding-right: 7rem;
+    }
+
+    .bloch_sphere2 {
+        padding-left: 7rem;
+    }
+}
+
+@media (min-width: 1540px) {
+    .wrapper {
+        max-width: 1278px;
+    }
+
+    section {
+        padding-top: 6.2rem;
+    }
+}
+
+@media (min-width: 1630px) {
+    .wrapper {
+        max-width: 1315px;
+    }
+}
+
+@media (min-width: 1740px) {
+    .wrapper {
+        max-width: 1426px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .wrapper {
+        max-width: 1540px;
+    }
+
+    .hero h1 {
+        font-size: 6rem;
+        max-width: 71rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        width: 62rem;
+    }
+
+    h2 {
+        font-size: 4.4rem;
+    }
+
+    h4 {
+        font-size: 3.2rem;
+    }
+
+    h3 {
+        font-size: 4rem;
+    }
+
+    h5 {
+        font-size: 3rem;
+    }
+
+    h6 {
+        font-size: 2.7rem;
+    }
+
+    .set1 {
+        gap: 8.2rem;
+    }
+
+    .set2 {
+        gap: 8.2rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    .nav__item {
+        font-size: 1.8rem;
+    }
+
+    .state_list li {
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        padding: 0 5rem;
+    }
+
+    .card {
+        width: 35rem;
+        padding: 2rem 0 5.5rem 0;
+    }
+
+    .bloch_sphere {
+        padding-left: 10rem;
+    }
+
+    .ket_notation {
+        padding-left: 20rem;
+    }
+
+    .bloch_sphere1 {
+        padding-right: 15rem;
+    }
+
+    .bloch_sphere2 {
+        padding-left: 15rem;
+    }
+
+    .next a {
+        font-size: 1.8rem;
+    }
+}
+

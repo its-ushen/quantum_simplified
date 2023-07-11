@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quantum Simplified</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display:wght@400;500&family=Raleway:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/microinteractions.css">
+    </head>
+    <body>
+        <div class="image">
+            <header class="nav__bar">
+                <div class="wrapper nav__bar-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="Images/logo.svg" alt="logo" />
+                    </a>
+
+                    <ul class="nav__menu">
+                        <li><a class="nav__item home active" href="index.html">Home</a></li>
+                        <li>
+                            <a class="nav__item trigger-item" href="index.html#quantum_basics">Basics</a>
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-circuits.html"
+                                >Circuits</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-algorithms.html"
+                                >Algorithms</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="real-world.html"
+                                >Applications</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav__item" href="quantum-protocols.html"
+                                >Protocols</a
+                            >
+                        </li>
+                    </ul>
+
+                    <div class="hamburger">
+                        <img
+                            src="Images/menu.svg"
+                            alt="hamburger menu"
+                            class="hamburger_image"
+                        />
+                    </div>
+                </div>
+            </header>
+
+            <main class="hero">
+                <div class="wrapper three">
+                    <h1>Quantum Computing Made Easy</h1>
+                    <p class="subtitle">
+                        Want to learn <strong>Quantum Computing</strong> but
+                        dont know where to start? Here you can learn the
+                        fundamentals without the unnecessary terminology
+                    </p>
+                    <div class="cta">
+                        <a href="#" class="trigger-cta">
+                            <span class="bordered"
+                                ><img
+                                    src="Images/code symbol.svg"
+                                    alt="code symbol"
+                            /></span>
+                            <p class="bordered">Learn the basics</p>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="wrapper two">
+            <section class="quantum_basics">
+                <h2>Quantum Basics</h2>
+                <div class="col">
+                    <div class="left_col">
+                        <h4>What is quantum computing?</h4>
+                        <p>
+                            A new way of designing computers that use the
+                            properties of quantum physics to solve problems in a
+                            way that is better than classical computers
+                        </p>
+                    </div>
+
+                    <div class="right_col">
+                        <h4>What is different</h4>
+                        <p>
+                            Classical computers use bits, either 0 or 1. Whereas
+                            quantum computers use qubits, which can be both 0
+                            and 1 simultaneously (further explained in
+                            Superposition). This allows quantum computers to
+                            solve problems faster than classical computers.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="border"></div>
+
+        <div class="wrapper">
+            <section class="quantum_states">
+                <h3>Quantum States</h3>
+                <div class="col">
+                    <div class="col_left">
+                        <div>
+                            <h4>What is a quantum state?</h4>
+                            <p>
+                                A quantum state represents the position or
+                                location of a qubit. Unlike classical bits,
+                                qubits can exist in multiple states at once.
+                                However, once measured, a qubit has a single
+                                state, either 0 or 1.
+                            </p>
+                        </div>
+                        <div class="indented bloch_sphere">
+                            <h5>Bloch Sphere</h5>
+                            <p>
+                                The Bloch sphere is a three-dimensional
+                                representation of the possible states of a
+                                qubit. Each point on the sphere's surface
+                                represents a different quantum state. At the
+                                poles lie the 0 (|0>) and 1 (|1>) states. Along
+                                the x axis likes the Plus (|+>) and Minus
+                                (|->)state
+                            </p>
+                        </div>
+                        <div class="indented ket_notation">
+                            <h5>Ket Notation</h5>
+                            <p>
+                                Ket Notation is a common way to represent
+                                quantum states
+                            </p>
+                            <ul class="state_list">
+                                <li>The 0 state (|0>)</li>
+                                <li>The 1 state (|1>)</li>
+                                <li>The Plus state (|+>)</li>
+                                <li>The Minus state (|->)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col_right bloch_sphere">
+                        <img
+                            class="bloch_sphere1"
+                            src="Images/Bloch Sphere 1.png"
+                            alt="bloch sphere 1"
+                        />
+                        <img
+                            src="Images/Bloch Sphere 2.png"
+                            alt="bloch sphere 2"
+                            class="bloch_sphere2"
+                        />
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="border"></div>
+
+        <div class="wrapper">
+            <section class="quantum_properties-desktop">
+                <h3>Quantum Properties</h3>
+                <div class="set1">
+                    <div class="card superpostion">
+                        <h6>Superposition</h6>
+                        <p>
+                            Quantum Superposition states that until a qubit is
+                            measured, it can exist in a superposition of both 0
+                            and 1 states simultaneously, meaning it has a
+                            probability of being in both states at once.
+                        </p>
+                    </div>
+                    <div class="card interference">
+                        <h6>Interference</h6>
+                        <p>
+                            Quantum interference occurs when two or more quantum
+                            states combine and interfere with each other,
+                            resulting in either constructive or destructive
+                            interference.
+                        </p>
+                    </div>
+                    <div class="card entanglement">
+                        <h6>Entanglement</h6>
+                        <p>
+                            Quantum entanglement is a phenomenon where two or
+                            more particles can become correlated in a way that
+                            their quantum states are linked, regardless of the
+                            distance between them.
+                        </p>
+                    </div>
+                </div>
+                <div class="set2">
+                    <div class="card measurement">
+                        <h6>Measurement</h6>
+                        <p>
+                            Quantum Superposition states that until a qubit is
+                            measured, it can exist in a superposition of both 0
+                            and 1 states simultaneously, meaning it has a
+                            probability of being in both states at once.
+                        </p>
+                    </div>
+                    <div class="card discreteness">
+                        <h6>Discreteness</h6>
+                        <p>
+                            Quantum mechanics predicts that physical quantities
+                            can only take on certain discrete values. If a line
+                            described the values of classical mechanic, the
+                            rungs on a ladder would describe quantum mechanics’
+                            values.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="wrapper">
+            <section class="quantum_properties-mobile">
+                <h3>Quantum Properties</h3>
+                <div class="carousel">
+                    <button class="carousel__button carousel__button--left">
+                        <img src="Images/left arrow.svg" alt="left arrow" />
+                    </button>
+
+                    <div class="carousel__track-container">
+                        <ul class="carousel__track">
+                            <li class="carousel__slide current-slide">
+                                <p class="title">Entanglement</p>
+                                <p class="content">
+                                    Quantum entanglement is a phenomenon where
+                                    two or more particles can become correlated
+                                    in a way that their quantum states are
+                                    linked, regardless of the distance between
+                                    them.
+                                </p>
+                            </li>
+                            <li class="carousel__slide">
+                                <p class="title">Interference</p>
+                                <p class="content">
+                                    Quantum interference occurs when two or more
+                                    quantum states combine and interfere with
+                                    each other, resulting in either constructive
+                                    or destructive interference.
+                                </p>
+                            </li>
+                            <li class="carousel__slide">
+                                <p class="title">Superposition</p>
+                                <p class="content">
+                                    Quantum Superposition states that until a
+                                    qubit is measured, it can exist in a
+                                    superposition of both 0 and 1 states
+                                    simultaneously, meaning it has a probability
+                                    of being in both states at once.
+                                </p>
+                            </li>
+                            <li class="carousel__slide">
+                                <p class="title">Measurement</p>
+                                <p class="content">
+                                    Quantum Superposition states that until a
+                                    qubit is measured, it can exist in a
+                                    superposition of both 0 and 1 states
+                                    simultaneously, meaning it has a probability
+                                    of being in both states at once.
+                                </p>
+                            </li>
+                            <li class="carousel__slide">
+                                <p class="title">Discreteness</p>
+                                <p class="content">
+                                    Quantum mechanics predicts that physical
+                                    quantities can only take on certain discrete
+                                    values. If a line described the values of
+                                    classical mechanic, the rungs on a ladder
+                                    would describe quantum mechanics’ values.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="carousel__button carousel__button--right">
+                        <img src="Images/right arrow.svg" alt="right arrow" />
+                    </button>
+
+                    <div class="carousel__nav">
+                        <button
+                            class="carousel__indicator current-slide"
+                        ></button>
+                        <button class="carousel__indicator"></button>
+                        <button class="carousel__indicator"></button>
+                        <button class="carousel__indicator"></button>
+                        <button class="carousel__indicator"></button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="wrapper">
+            <div class="next">
+                <a href="quantum-circuits.html">Next: Quantum Circuits</a>
+            </div>
+        </div>
+
+        <footer class="footer-mobile">
+            <div class="border"></div>
+            <div class="footer_logo">
+                <a href="#"><img src="Images/logo.svg" alt="logo" /></a>
+            </div>
+            <p class="join">Join the Community</p>
+
+            <div class="social_headers">
+                <a href="#"><img src="Images/twitter.png" alt="twitter" /></a>
+                <a href="#"
+                    ><img src="Images/facebook.png" alt="facebook"
+                /></a>
+                <a href="#"
+                    ><img src="Images/linkedin.png" alt="linkedin"
+                /></a>
+            </div>
+        </footer>
+
+        <footer class="footer-desktop">
+            <div class="border"></div>
+            <div class="wrapper">
+                <div class="footer_nav">
+                    <div class="footer_logo">
+                        <a href="#"
+                            ><img src="Images/logo.svg" alt="logo"
+                        /></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li><a href="index.html">Basics</a></li>
+                            <li>
+                                <a href="quantum-circuits.html">Circuits</a>
+                            </li>
+                            <li>
+                                <a href="quantum-algorithms.html">Algorithms</a>
+                            </li>
+                            <li><a href="real-world.html">Applications</a></li>
+                            <li>
+                                <a href="quantum-protocols.html">Protocols</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="interaction">
+                    <div class="social_headers">
+                        <a href="#"
+                            ><img src="Images/twitter.png" alt="twitter"
+                        /></a>
+                        <a href="#"
+                            ><img src="Images/facebook.png" alt="facebook"
+                        /></a>
+                        <a href="#"
+                            ><img src="Images/linkedin.png" alt="linkedin"
+                        /></a>
+                    </div>
+
+                    <div class="newsletter">
+                        <p>Join the Community</p>
+                        <input type="email" placeholder="Enter your email" />
+                        <a href="#"
+                            ><img
+                                src="Images/submit.svg"
+                                alt="submit email to newsletter"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/carousel.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/scrolldown.js"></script>
+        <script src="js/scrollto.js"></script>
+    </body>
+</html>

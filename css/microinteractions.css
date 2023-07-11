@@ -1,0 +1,26 @@
+.nav__item {
+    position: relative;
+}
+
+.nav__item.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+.nav__item::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid grey;
+    bottom: -6px;
+    transition: width .3s;
+}
+
+.nav__item:hover::before {
+    width: 35%;
+}
